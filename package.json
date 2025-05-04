@@ -1,0 +1,70 @@
+{
+  "name": "flashcards-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for managing flashcard decks and study sessions",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts",
+    "prepare": "npm run build",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest watch",
+    "release": "./scripts/release.sh",
+    "release:patch": "./scripts/release.sh patch",
+    "release:minor": "./scripts/release.sh minor",
+    "release:major": "./scripts/release.sh major",
+    "prepare-release": "node scripts/prepare-release.js",
+    "check-release": "node scripts/check-release-readiness.js"
+  },
+  "keywords": [
+    "mcp",
+    "flashcards",
+    "study",
+    "education"
+  ],
+  "author": "Vanya",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.1",
+    "google-auth-library": "^9.15.1",
+    "googleapis": "^148.0.0",
+    "json2csv": "^5.0.7",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.7.1",
+    "mammoth": "^1.8.0",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.0",
+    "@types/node": "^22.15.3",
+    "@types/pdf-parse": "^1.1.4",
+    "@types/sinon": "^17.0.4",
+    "@types/uuid": "^10.0.0",
+    "@vitest/coverage-v8": "^2.2.5",
+    "sinon": "^20.0.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^2.2.5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/No-Smoke/flashcards-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/No-Smoke/flashcards-mcp-server/issues"
+  },
+  "homepage": "https://github.com/No-Smoke/flashcards-mcp-server#readme"
+}
