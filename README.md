@@ -21,6 +21,12 @@ A Model Context Protocol (MCP) server for creating, managing, and studying flash
 - **Deck Management**: Easy deck organization with drag-and-drop support
 - **Study Animations**: Smooth card flipping and transitions
 
+### Analytics Dashboard
+- **Study Metrics**: Comprehensive tracking of learning patterns and retention
+- **Performance Insights**: Analysis of card difficulty and learning efficiency
+- **Interactive Visualizations**: Data-driven charts for progress monitoring
+- **Personalized Recommendations**: AI-powered suggestions for study optimization
+
 ## Architecture
 
 ```
@@ -30,6 +36,8 @@ flashcards-mcp-server/
 │   ├── services/           # Business logic services
 │   ├── models/             # Data models and interfaces
 │   ├── utils/              # Utility functions
+│   ├── monitoring/         # Performance monitoring 
+│   ├── analytics/          # Analytics dashboard components
 │   └── tests/              # Unit and integration tests
 ├── frontend/               # React UI components
 ├── docs/                   # Documentation
@@ -105,6 +113,12 @@ Add to your Claude Desktop configuration:
 - `importGoogleDriveFile`: Import and process file from Google Drive
 - `processAndGenerateCards`: Upload file content and generate cards
 
+### Analytics Tools
+- `getDashboardData`: Get comprehensive analytics dashboard data
+- `getStudyMetrics`: Retrieve detailed study performance metrics
+- `exportAnalytics`: Export analytics data in various formats
+- `getRetentionStats`: Get spaced repetition effectiveness statistics
+
 ## Examples
 
 ### Create a Deck
@@ -136,6 +150,13 @@ const result = await mcpClient.call('answerCard', {
   rating: 4
 });
 ```
+
+## Documentation
+
+- [Installation Guide](docs/installation.md)
+- [API Reference](docs/api-reference.md)
+- [React Components](docs/react-components.md)
+- [Analytics Dashboard](docs/analytics/ANALYTICS_DASHBOARD_ARCHITECTURE.md)
 
 ## Testing
 
