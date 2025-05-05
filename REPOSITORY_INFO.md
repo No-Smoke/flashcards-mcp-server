@@ -16,9 +16,34 @@ The Flashcards MCP server project has been consolidated into this repository. Al
 - `/build` - Compiled JavaScript output
 - `/tests` - Test suite
 
-## Configuration
+## Local Development Setup
 
-For Claude Desktop, configure this repository as:
+For local development:
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/No-Smoke/flashcards-mcp-server.git
+   cd flashcards-mcp-server
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Build the project:
+   ```bash
+   npm run build
+   ```
+
+4. Run in development mode:
+   ```bash
+   npm run dev
+   ```
+
+## Claude Desktop Configuration
+
+Configure this repository in Claude Desktop as:
 
 ```json
 {
@@ -30,5 +55,13 @@ For Claude Desktop, configure this repository as:
   }
 }
 ```
+
+## Deprecated Repositories
+
+The following repositories have been deprecated in favor of this consolidated repository:
+
+- `mcp-flashcards` - Archived
+- `flashcards-mcp` - Deprecated
+- `flashcard-mcp` - Deprecated
 
 Last updated: May 5, 2025
